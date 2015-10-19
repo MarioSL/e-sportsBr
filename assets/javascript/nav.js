@@ -1,10 +1,10 @@
 $(function(){
-	var nav = $('#menuHeader');
+	var nav = $('#box-nav');
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 200) {
-			nav.addClass("menu-fixo");
+		if ($(this).scrollTop() > 500){
+			nav.addClass("nav-fixed");
 		} else {
-			nav.removeClass("menu-fixo");
+			nav.removeClass("nav-fixed");
 		}
 	});
 });

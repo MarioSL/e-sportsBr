@@ -97,10 +97,13 @@ body{
 /*------nav-fixes--------*/
 /*-----------------------*/
 /*-----------------------*/
-.nav-fixed  {
+.nav-fixed {
     position:fixed !important;
-    top: 0;
+    top: 0 !important;
     z-index: 99;
+}
+.nav-fixed #logo{
+  top:0 !important;
 }
 /*------clearfix---------*/
 /*-----------------------*/
