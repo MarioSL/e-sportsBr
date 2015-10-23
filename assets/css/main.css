@@ -1,5 +1,38 @@
-body{
+/**
+* Defaults style
+* ----------------------------------
+*/
+body {
+    margin: 0;
+    padding: 0;
+}
+/**
+* Footer always on ,asjls
+* ----------------------------------
+*/
+body, html {
+  height: 100%;
   margin: 0;
+}
+
+#main-content {
+  width: 100%;
+  padding-top: 30px;
+  min-height: 95.57522123893806%;
+  position: relative;
+  background: #000 url(../images/images.jpeg) repeat top left;
+}
+
+* html #main-content {
+    height: 100%; /*IE6*/
+}
+
+#main-footer {
+  background: #000 url(../images/5.jpg) repeat top right;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: #FFF;
 }
 /**
 *
@@ -10,7 +43,6 @@ body{
 #banner{
   width: 100%;
   height: 500px;
-  margin: 0 0;
   background-color: green;
 }
 /**
@@ -26,9 +58,9 @@ body{
   position: absolute;
   top: -70px;
   left: 50%;
-  z-index: 20;
   border: 1px solid black;
   background-color: red;
+
 }
 
 #box-nav {
@@ -37,19 +69,19 @@ body{
   height: 11px;
   position: absolute;
   left: 0px;
-  top: 500px;
-  z-index: 20;
+  z-index: 9999;
 }
 /*-------nav------*/
 /*----------------*/
 /*----------------*/
 #box-nav nav {
+  position: absolute;
+  left: 5%;
   width: 90%;
   height: 70px;
   margin: 0 auto;
-  position: relative;
   top: 6px;
-  z-index: 20;
+
   background-color: blue;
 }
 /*------nav-ul-------*/
@@ -60,6 +92,7 @@ body{
   margin-right: 6%;
   padding-bottom: 10px;
   float: left;
+
 }
 /*------nav-ul-right---*/
 /*----------------*/
@@ -68,6 +101,7 @@ body{
   padding-bottom: 10px;
   padding-right: 5%;
   float: right;
+
 }
 /*------nav-ul-left-------*/
 /*-----------------------*/
@@ -75,20 +109,49 @@ body{
 #box-nav nav ul li{
   padding: 10px 0 0 5%;
   list-style: none;
-  float: left
+  float: left;
+
 }
 
 #box-nav nav ul.right li{
   padding: 10px 60px 0 0;
   list-style: none;
   float: right;
+
 }
 
 #box-nav nav ul li a{
   background-color: red;
   padding: 10px;
+
 }
 /**
+*
+*content-index --- //-----//--------//-------/
+*
+***/
+#content-index{
+  height: 600px;
+  position: relative;
+  margin-top: 100px;
+  bottom: 0;
+}
+/**
+*
+*footer --- //-----//--------//-------/
+*
+***/
+#main-footer img{
+  height: 50px;
+  width: 180px;
+  float: left;
+  padding: 10px 0 10px 100px;
+}
+
+#main-footer p{
+  margin: 25px 0 0 30%;
+}
+/***
 *
 *Classes --- //-----//--------//-------/
 *
@@ -100,7 +163,7 @@ body{
 .nav-fixed {
     position:fixed !important;
     top: 0 !important;
-    z-index: 99;
+
 }
 .nav-fixed #logo{
   top:0 !important;
