@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <script type="text/javascript" src="assets/javascript/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="assets/javascript/nav.js"></script>
+    <script type="text/javascript" src="assets/javascript/request.js"></script>
   </head>
   <body>
       <head>
@@ -13,22 +14,22 @@
         <div id="box-nav">
           <nav>
             <ul class="clearfix">
-              <li><a href="#">XXXXXX</a></li>
-              <li><a href="#">XXXXXX</a></li>
-              <li><a href="#">XXXXXX</a></li>
+              <li><a href="page-1" data-url="global/page-1.html">XXXXXX</a></li>
+              <li><a href="page-2" data-url="global/page-2.html">XXXXXX</a></li>
+              <li><a href="page-3" data-url="global/page-3.html">XXXXXX</a></li>
             </ul>
             <ul class="right clearfix">
-              <li><a href="#">XXXXXX</a></li>
-              <li><a href="#">XXXXXX</a></li>
+              <li><a href="page-4" data-url="global/page-4.html">XXXXXX</a></li>
+              <li><a href="page-5" data-url="global/page-5.html">XXXXXX</a></li>
             </ul>
-            <a id="logo" href="#">HOME</a>
+            <a id="logo" href="page-home" data-url="global/page-home.html">HOME</a>
           </nav>
         </div>
       </head>
       <section id="main-content">
-        <article id="content-index">
-          <h1>Pagina inicial</h1>
-        </article>
+        <section id="page">
+          <p id="loading" style="display: none;">Carregando...</p>
+        </section>
         <footer id="main-footer">
               <img src="assets/images/image_preview.jpeg" alt="Logo UTFPR" class="clearfix" />
               <p>
