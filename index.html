@@ -7,34 +7,35 @@
     <script type="text/javascript" src="assets/javascript/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="assets/javascript/nav.js"></script>
     <script type="text/javascript" src="assets/javascript/request.js"></script>
+    <script type="text/javascript" src="assets/javascript/digital-numbers.js"></script>
+    <script type="text/javascript" src="assets/javascript/digital-clock.js"></script>
   </head>
-  <body>
+  <body onload="clock()">
       <head>
         <div id="banner"></div>
         <div id="box-nav">
-          <nav>
-            <ul class="clearfix">
-              <li><a href="page-1" data-url="global/page-1.html">XXXXXX</a></li>
-              <li><a href="page-2" data-url="global/page-2.html">XXXXXX</a></li>
-              <li><a href="page-3" data-url="global/page-3.html">XXXXXX</a></li>
+          <nav >
+            <ul>
+              <li><a href="#page-1">Page 1</a></li>
+              <li><a href="#page-2">Page 2</a></li>
+              <li><a href="#page-3">XXXXXX</a></li>
             </ul>
-            <ul class="right clearfix">
-              <li><a href="page-4" data-url="global/page-4.html">XXXXXX</a></li>
-              <li><a href="page-5" data-url="global/page-5.html">XXXXXX</a></li>
+            <ul class="right">
+              <li><a href="#page-4">XXXXXX</a></li>
+              <li><a href="#page-5">XXXXXX</a></li>
             </ul>
-            <a id="logo" href="page-home" data-url="global/page-home.html">HOME</a>
+            <a id="logo" href="#page-home">HOME</a>
           </nav>
         </div>
       </head>
       <section id="main-content">
-        <section id="page">
+        <section id="content" class="clearfix">
           <p id="loading" style="display: none;">Carregando...</p>
         </section>
         <footer id="main-footer">
-              <img src="assets/images/image_preview.jpeg" alt="Logo UTFPR" class="clearfix" />
-              <p>
-                  Copyright © PI1 LV Jefferson Henrique Ramos , Mario Souza Leão 2015.
-              </p>
+          <canvas id="clock" width="250%" height="70%">Sem suporte</canvas>
+          <img src="assets/images/image_preview.jpeg" alt="Logo UTFPR" class="clearfix" />
+          <p>Copyright © PI1 LV Jefferson Henrique Ramos , Mario Souza Leão 2015.</p>
         </footer>
     </section>
   </body>

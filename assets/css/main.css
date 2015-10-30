@@ -6,8 +6,11 @@ body {
     margin: 0;
     padding: 0;
 }
+h1,p{
+  color: #CECECE;
+}
 /**
-* Footer always on ,asjls
+* Footer always on
 * ----------------------------------
 */
 body, html {
@@ -20,7 +23,9 @@ body, html {
   padding-top: 30px;
   min-height: 95.57522123893806%;
   position: relative;
-  background: #000 url(../images/images.jpeg) repeat top left;
+  background: #000 url(../images/LoL-Background.jpg) no-repeat center;
+  background-size:cover;
+  background-attachment: fixed;
 }
 
 * html #main-content {
@@ -34,6 +39,15 @@ body, html {
   width: 100%;
   color: #FFF;
 }
+/**
+* Loading
+* ----------------------------------
+*/
+#loading{
+  text-align: center;
+
+}
+
 /**
 *
 *Header --- //-----//--------//-------/
@@ -52,19 +66,19 @@ body, html {
 ***/
 /*--------LOGO-----*/
 #logo{
-  width: 290px;
-  height: 140px;
-  margin-left: -185px;
+  width: 160px;
+  height: 150px;
+  margin-left: -48px;
   position: absolute;
-  top: -70px;
-  left: 50%;
+  top: -60px;
+  left: 52%;
   border: 1px solid black;
   background-color: red;
 
 }
 
 #box-nav {
-  background-color: black;
+  background: #000 url(../images/border.png) repeat top left;
   width: 100%;
   height: 11px;
   position: absolute;
@@ -76,65 +90,77 @@ body, html {
 /*----------------*/
 #box-nav nav {
   position: absolute;
-  left: 5%;
+  left: 4%;
   width: 90%;
-  height: 70px;
+  height: 90px;
   margin: 0 auto;
   top: 6px;
 
-  background-color: blue;
+  background: transparent url(../images/navbar.png) no-repeat center;
+  background-size: 90% 90px;
 }
 /*------nav-ul-------*/
 /*----------------*/
 /*----------------*/
 #box-nav nav ul{
-  width: 30%;
-  margin-right: 6%;
+  width: 42%;
+  margin: 0;
+  margin-top: 15px;
   padding-bottom: 10px;
   float: left;
-
+  margin-left: 3%;
+  list-style: none;
 }
 /*------nav-ul-right---*/
 /*----------------*/
 /*----------------*/
 #box-nav nav ul.right{
+  width: 35%;
   padding-bottom: 10px;
   padding-right: 5%;
   float: right;
+  margin-right: 4%;
 
 }
 /*------nav-ul-left-------*/
 /*-----------------------*/
 /*-----------------------*/
-#box-nav nav ul li{
-  padding: 10px 0 0 5%;
-  list-style: none;
-  float: left;
-
-}
-
-#box-nav nav ul.right li{
-  padding: 10px 60px 0 0;
-  list-style: none;
-  float: right;
-
-}
-
 #box-nav nav ul li a{
-  background-color: red;
-  padding: 10px;
+  text-align: center;
+  margin-left: 1%;
+  height: 30px;
+  width: 160px;
+  padding-top: 5px;
+  float: left;
+  background: transparent url(../images/button-hover.png) no-repeat center;
+  background-size:contain;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family:sans-serif;
 
+}
+
+#box-nav nav ul.right li a{
+  float: right;
+}
+
+#box-nav nav ul li a:hover{
+  background:transparent url(../images/button.png) no-repeat center;
 }
 /**
-*
-*content-index --- //-----//--------//-------/
+**content-index --- //-----//--------//-------/
 *
 ***/
-#content-index{
-  height: 600px;
+#content{
+  height: 100%;
+  min-height: 200px;
   position: relative;
-  margin-top: 100px;
-  bottom: 0;
+  bottom: 100px;
+  margin: 15% 5% 0 5%;
+  padding: 5% 2%;
+  border: 1px solid black;
+  background: rgba(0,0,0,0.85);
 }
 /**
 *
@@ -153,10 +179,52 @@ body, html {
 }
 /***
 *
+*Canvas-footer --- //-----//--------//-------/
+*
+***/
+#clock{
+  background-color: white;
+  float: right;
+  margin: 1% 3%;
+}
+/**
+*
+*Page-error --- //-----//--------//-------/
+*
+***/
+#image-error{
+  background: #000 url(../images/404.png) no-repeat top left;
+  background-size:cover;
+  height: 400px;
+  width: 900px;
+  margin: 0 auto;
+}
+#go-back{
+  position: absolute;
+  bottom: 14%;
+  right: 40.7%;
+  height: 10%;
+  width: 12%;
+}
+#go-home{
+  position: absolute;
+  bottom: 14.3%;
+  right: 26.1%;
+  height: 9.7%;
+  width: 14.4%;
+}
+
+/***
+*
 *Classes --- //-----//--------//-------/
 *
 ***/
-
+/*------nav-active--------*/
+/*-----------------------*/
+/*-----------------------*/
+#box-nav nav ul li a.active{
+  background:transparent url(../images/button.png) no-repeat center;
+}
 /*------nav-fixes--------*/
 /*-----------------------*/
 /*-----------------------*/
