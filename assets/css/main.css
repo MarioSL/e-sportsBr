@@ -5,9 +5,13 @@
 body {
     margin: 0;
     padding: 0;
+    color: #CECECE;
+    font-size: 15px;
+    font-family: sans-serif,serif,inherit;
 }
-h1,p{
-  color: #CECECE;
+h1{
+  border-bottom: 1px solid white;
+  font-size: 20px;
 }
 /**
 * Footer always on
@@ -45,7 +49,6 @@ body, html {
 */
 #loading{
   text-align: center;
-
 }
 
 /**
@@ -55,8 +58,14 @@ body, html {
 ***/
 /*-----Baner-------*/
 #banner{
-	width: 100%;
-	height: 500px;
+  width: 100%;
+  height: 500px;
+  background-color: black;
+}
+
+#banner img{
+  position: absolute;
+  left: -4px;
 }
 /**
 *
@@ -65,15 +74,14 @@ body, html {
 ***/
 /*--------LOGO-----*/
 #logo{
-  width: 160px;
-  height: 150px;
-  margin-left: -48px;
+  width: 200px;
+  height: 130px;
+  margin-left: -65px;
   position: absolute;
-  top: -60px;
+  top: -50px;
   left: 52%;
-  border: 1px solid black;
-  background-color: red;
-
+  background: #000 url(../images/logo-e-sports.png) no-repeat center;
+  background-size:cover;
 }
 
 #box-nav {
@@ -148,7 +156,7 @@ body, html {
   background:transparent url(../images/button.png) no-repeat center;
 }
 /**
-**content-index --- //-----//--------//-------/
+**content --- //-----//--------//-------/
 *
 ***/
 #content{
@@ -158,14 +166,61 @@ body, html {
   bottom: 100px;
   margin: 15% 5% 0 5%;
   padding: 5% 2%;
-  border: 1px solid black;
   background: rgba(0,0,0,0.85);
 }
+
+#content article{
+  padding-right: 380px;
+}
+/**
+*
+*aside --- //-----//--------//-------/
+*
+***/
+#content-aside{
+  width: 300px;
+  height: 100%;
+  float:right;
+  padding: 0 30px;
+  border-left: 1px solid white;
+}
+
+#content-aside ul li{
+  list-style: none;
+  margin-top: 40px;
+  border-bottom: 1px solid white;
+}
+
+#content-aside ul li a{
+  text-decoration: none;
+}
+/***
+*
+*Page - form --- //-----//--------//-------/
+*
+***/
+/*------Form--------*/
+/*-----------------------*/
+/*-----------------------*/
+label,input,button{
+  display:block;
+}
+label[for=name],label[for=email],input[for=name],input[for=email]{
+  display: inline-block;
+}
+#name,#email{
+  margin-bottom: 20px;
+}
+
 /**
 *
 *footer --- //-----//--------//-------/
 *
 ***/
+
+/*------main-footer--------*/
+/*-----------------------*/
+/*-----------------------*/
 #main-footer img{
   height: 50px;
   width: 180px;
@@ -175,6 +230,17 @@ body, html {
 
 #main-footer p{
   margin: 25px 0 0 30%;
+}
+
+
+/*------footer-home--------*/
+/*-----------------------*/
+/*-----------------------*/
+
+#footer-home{
+  border-top: 1px solid white;
+  position: absolute;
+  bottom: 0;
 }
 /***
 *
@@ -252,4 +318,12 @@ body, html {
 .group {
     zoom: 1;
     /* IE6&7*/
+}
+
+/*------text-center---------*/
+/*-----------------------*/
+/*-----------------------*/
+
+.text-center{
+  text-align: center;
 }

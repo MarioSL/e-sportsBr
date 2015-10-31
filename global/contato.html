@@ -1,0 +1,24 @@
+<section id="form">
+
+  <h1>Entre em contato</h1>
+
+  <p>
+    De sua opinião sobre o site
+  </p>
+  <form name="form" method="post" action="http://seudominio.com.br/cgi-sys/FormMail.cgi">
+    <input type=hidden name="destination" value="EmailQueVaiReceberAsMensagens">
+    <input type=hidden name="sent" value="#enviad">
+    <div id="name">
+      <label for="name">Nome:</label>
+      <input type="text" for="name">
+    </div>
+    <div id="email">
+      <label for="email">Email:</label>
+      <input type="email" for="email">
+    </div>
+    <label for="mensage">Menssagem:</label>
+    <textarea name="mensage" rows="8" cols="40"></textarea>
+
+    <input type="submit" value="Enviar">
+  </form>
+</section>
