@@ -1,50 +1,50 @@
 routes = new Map();
-routes["page-home"] = "global/page-home.html";
-routes["times"] = "global/times.html";
-routes["jogos"] = "global/jogos.html";
-routes["estudio"] = "global/estudio.html";
-routes["contato"] = "global/contato.html";
-routes["historia"] = "global/historia.html";
+routes["#page-home"] = "global/page-home.html";
+routes["#times"] = "global/times.html";
+routes["#jogos"] = "global/jogos.html";
+routes["#estudio"] = "global/estudio.html";
+routes["#contato"] = "global/contato.html";
+routes["#historia"] = "global/historia.html";
 
 $(function(){
-  var pathname = "page-home";
-  if (location.pathname !== '/'){
-    pathname = location.pathname;
-    if(routes[pathname] == undefined)
-      getContent(pathname, true,"global/page-error.html");
+  var hash = "#page-home";
+  if (location.hash !== ""){
+    hash = location.hash;
+    if(routes[hash] == undefined)
+      getContent(hash, true,"global/page-error.html");
 
     else{
-      if(routes[pathname] !== history.state)
-        getContent(pathname, true,routes[pathname]);
+      if(routes[hash] !== history.state)
+        getContent(hash, true,routes[hash]);
 
       else
-        getContent(pathname, false,routes[pathname]);
+        getContent(hash, false,routes[hash]);
 
     }
   }else{
-    history.replaceState(routes[pathname], null,pathname);
-    getContent(pathname, false,routes[pathname]);
+    history.replaceState(routes[hash], null,hash);
+    getContent(hash, false,routes[hash]);
   }
-  activeButton(pathname);
+  activeButton(hash);
   $('a').click(function(e){
       e.preventDefault();
-      var patchname = $(this).attr('href');
-      getContent(patchname, true,routes[patchname]);
-      activeButton(pathname);
+      var hash = $(this).attr('href');
+      getContent(hash, true,routes[hash]);
+      activeButton(hash);
     });
     window.addEventListener("popstate", function(e) {
-      if(routes[location.pathname] !== undefined)
-        getContent(location.pathname, false,routes[location.pathname]);
+      if(routes[location.hash] !== undefined)
+        getContent(location.hash, false,routes[location.hash]);
       else
-        getContent(location.pathname, false,"global/page-error.html");
-      activeButton(location.pathname);
+        getContent(location.hash, false,"global/page-error.html");
+      activeButton(location.hash);
     });
 });
 
-function activeButton(pathname){
-  if(pathname !== "page-home"){
+function activeButton(hash){
+  if(hash !== "#page-home"){
     $('a').removeClass('active');
-    $('a[href = '+pathname+']').addClass('active');
+    $('a[href = '+hash+']').addClass('active');
   }else {
     $('a').removeClass('active');
   }
