@@ -41,7 +41,6 @@ h1{
 	
 }
 .menu > a{
-	
 	display:block;
 	padding: 15px;
 	color: #FFF;
@@ -256,7 +255,7 @@ body, html {
 ***/
 #content-aside2{
   width: 300px;
-  height: 4190px;
+  height: 100%;
   float: left;
   padding: 0 30px;
   border-right: 1px solid white;
