@@ -1,10 +1,10 @@
 routes = new Map();
 routes["#page-home"] = "global/page-home.html";
-routes["#page-1"] = "global/times.html";
-routes["#page-2"] = "global/jogos.html";
-routes["#page-3"] = "global/estudio.html";
-routes["#page-4"] = "global/contato.html";
-routes["#page-5"] = "global/historia.html";
+routes["#times"] = "global/times.html";
+routes["#jogos"] = "global/jogos.html";
+routes["#estudio"] = "global/estudio.html";
+routes["#contato"] = "global/contato.html";
+routes["#historia"] = "global/historia.html";
 
 $(function(){
   var hash = "#page-home";

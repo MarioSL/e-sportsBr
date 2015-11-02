@@ -205,16 +205,44 @@ body, html {
   padding: 5% 2%;
   background: rgba(0,0,0,0.85);
 }
-
+/*------home--------*/
+/*-----------------------*/
+/*-----------------------*/
 #article-home{
   padding-right: 380px;
+}
+
+/*------teams--------*/
+/*-----------------------*/
+/*-----------------------*/
+
+#teams li{
+  border-bottom: 1px solid white;
+  height: 100%;
+  list-style: none;
+}
+
+#teams li h3{
+  font-size: 30px;
+  font-style: oblique;
+  text-decoration:underline;
+}
+#teams li img{
+  float: left;
+  width: 20%;
+  height: 20%;
+  margin-bottom: 3%;
+}
+
+#teams li p{
+  margin-top: 5%;
 }
 /**
 *
 *aside --- //-----//--------//-------/
 *
 ***/
-#content-aside{
+#home-aside{
   width: 300px;
   height: 100%;
   float:right;
@@ -235,13 +263,13 @@ body, html {
   
   
 }
-#content-aside ul li{
+#home-aside ul li{
   list-style: none;
   margin-top: 40px;
   border-bottom: 1px solid white;
 }
 
-#content-aside ul li a{
+#home-aside ul li a{
   text-decoration: none;
 }
 /***
