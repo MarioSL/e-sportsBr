@@ -44,7 +44,7 @@ h1{
 	
 	display:block;
 	padding: 15px;
-	color: #F25;
+	color: #FFF;
 	text-decoration:none;
 	font-family:"Times New Roman";
 	font-size:30px;
@@ -256,7 +256,7 @@ body, html {
 ***/
 #content-aside2{
   width: 300px;
-  height: 3600px;
+  height: 4190px;
   float: left;
   padding: 0 30px;
   border-right: 1px solid white;
