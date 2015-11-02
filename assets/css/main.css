@@ -14,42 +14,15 @@ h1{
   font-size: 25px;
   text-align:center;
 }
-.p{
-    font-family: "Times New Roman";
-    text-align: justify;
-    font-size: 12pt;
-    text-indent: 15mm;
-	line-height:150%;
-	
-}
-#article-gamer{
-	padding-left:380px;
 
+#article-games{
+	padding-left:260px;
 }
-/**
-*
-* Menu de navegação da pagina Jogos --- //-----//--------//-------/
-*
-***/
-.menu {
-	width: 300px;
-	margin: 10px auto;
-	text-align:center;
-	border-radius: 5px;
-	float:left;
-	text-align:left;
-	
+
+#article-games ul {
+    list-style: none;
 }
-.menu > a{
-	
-	display:block;
-	padding: 15px;
-	color: #FFF;
-	text-decoration:none;
-	font-family:"Times New Roman";
-	font-size:30px;
-	
-}
+
 /**
 * Footer always on
 * ----------------------------------
@@ -251,18 +224,33 @@ body, html {
 }
 /**
 *
-*aside Pagina de Jogos --- //-----//--------//-------/
+*aside --- //-----//--------//-------/
 *
 ***/
-#content-aside2{
-  width: 300px;
-  height: 4190px;
+/*------games--------*/
+/*-----------------------*/
+/*-----------------------*/
+
+#games-aside{
   float: left;
-  padding: 0 30px;
+  margin: 0 2%;
   border-right: 1px solid white;
-  
-  
+  margin-top: 10%;
+
 }
+#nav-aside ul{
+  list-style: none;
+  padding: 10px;
+}
+#nav-aside ul li a{
+  font-size: 22px;
+  color: #CECECE;
+  padding: 10px;
+}
+/*------home-------*/
+/*-----------------------*/
+/*-----------------------*/
+
 #home-aside ul li{
   list-style: none;
   margin-top: 40px;
@@ -342,13 +330,6 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
   width: 900px;
   margin: 0 auto;
 }
-#go-back{
-  position: absolute;
-  bottom: 14%;
-  right: 40.7%;
-  height: 10%;
-  width: 12%;
-}
 #go-home{
   position: absolute;
   bottom: 14.3%;
@@ -398,10 +379,19 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
     /* IE6&7*/
 }
 
-/*------text-center---------*/
+/*------text----------*/
 /*-----------------------*/
 /*-----------------------*/
 
 .text-center{
   text-align: center;
+}
+
+
+.indentation{
+    font-family: "Times New Roman";
+    text-align: justify;
+    font-size: 12pt;
+    text-indent: 15mm;
+	  line-height:150%;
 }
