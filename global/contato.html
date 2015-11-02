@@ -5,20 +5,18 @@
   <p>
     De sua opinião sobre o site
   </p>
-  <form name="form" method="post" action="http://e-sportsbr.xyz/cgi-sys/FormMail.cgi">
+  <form name="form" method="post" action="CONTATO:contato@e-sports.xyz" enctype="text/plain">
     <div id="name">
       <label for="name">Nome:</label>
-      <input type="text" for="name">
+      <input type="text" name="name">
     </div>
     <div id="email">
       <label for="email">Email:</label>
-      <input type="email" for="email">
+      <input type="email" name="mail">
     </div>
     <label for="mensage">Menssagem:</label>
     <textarea name="mensage" rows="8" cols="40"></textarea>
 
     <input type="submit" value="Enviar">
-    <input type=hidden name="destination" value="contato@e-sportsbr.xyz">
-    <input type=hidden name="sent" value="#enviad">
   </form>
 </section>
