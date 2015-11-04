@@ -14,15 +14,6 @@ h1{
   font-size: 25px;
   text-align:center;
 }
-
-#article-games{
-	padding-left:260px;
-}
-
-#article-games ul {
-    list-style: none;
-}
-
 /**
 * Footer always on
 * ----------------------------------
@@ -144,13 +135,11 @@ body, html {
 /*-----------------------*/
 #box-nav nav ul li a{
   text-align: center;
-  margin-left: 1%;
+  margin-left:10%;
   height: 30px;
-  width: 160px;
+  width: 90px;
   padding-top: 5px;
   float: left;
-  background: transparent url(../images/button-hover.png) no-repeat center;
-  background-size:contain;
   text-decoration: none;
   color: white;
   font-size: 16px;
@@ -160,10 +149,6 @@ body, html {
 
 #box-nav nav ul.right li a{
   float: right;
-}
-
-#box-nav nav ul li a:hover{
-  background:transparent url(../images/button.png) no-repeat center;
 }
 /**
 **content --- //-----//--------//-------/
@@ -210,6 +195,14 @@ body, html {
 #teams li p{
   margin-top: 5%;
 }
+
+#article-games{
+	padding-left:270px;
+}
+
+#article-games h1{
+	padding-top: 160px;
+}
 /**
 *
 *aside --- //-----//--------//-------/
@@ -233,20 +226,24 @@ body, html {
 /*-----------------------*/
 
 #games-aside{
-  float: left;
+  position: absolute;
+  bottom: 91%;
   margin: 0 2%;
   border-right: 1px solid white;
   margin-top: 10%;
-
 }
 #nav-aside ul{
   list-style: none;
   padding: 10px;
 }
+#nav-aside ul li {
+  margin: 40px 0;
+}
+
 #nav-aside ul li a{
-  font-size: 22px;
+  text-decoration: none;
+  font-size: 18px;
   color: #CECECE;
-  padding: 10px;
 }
 /*------home-------*/
 /*-----------------------*/
@@ -347,8 +344,33 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
 /*------nav-active--------*/
 /*-----------------------*/
 /*-----------------------*/
-#box-nav nav ul li a.active{
-  background:transparent url(../images/button.png) no-repeat center;
+.btn{
+  font-family: arial;
+  text-transform: uppercase;
+  font-weight:700;
+  padding:  10px;
+  cursor: pointer;
+}
+
+.btn-blue{
+  background:#363636;
+  color:#fff;
+  box-shadow:0 5px 0 #1C1C1C;
+}
+
+.btn-blue:hover{
+  background:#4F4F4F;
+  box-shadow:0 5px 0 #363636;
+}
+
+.btn-blue:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
+}
+.btn-blue.active{
+  background:#696969;
+  box-shadow:0 5px 0 #4F4F4F;
 }
 /*------nav-fixes--------*/
 /*-----------------------*/
@@ -356,10 +378,14 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
 .nav-fixed {
     position:fixed !important;
     top: 0 !important;
-
 }
 .nav-fixed #logo{
   top:0 !important;
+}
+.aside-fixed{
+  position: fixed !important;
+  left: 6.79% !important;
+  bottom: 15% !important;
 }
 /*------clearfix---------*/
 /*-----------------------*/
