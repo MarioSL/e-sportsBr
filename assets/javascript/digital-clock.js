@@ -6,6 +6,7 @@ function clock(){
   context.fillRect(0, 0,canvas.width,canvas.height);
   context.fillStyle = "white";
   d = new Date();
+  
   hours = d.getHours();
   minutes = d.getMinutes();
   Seconds = d.getSeconds();
@@ -21,9 +22,9 @@ function clock(){
   numbers(parseInt(minutes%10),context,230,14);
   numbers(parseInt(minutes/10),context,180,14);
   numbers(parseInt(hours%10),context,100,14);
-  numbers(parseInt(hours/10),context,50,14  );
+  numbers(parseInt(hours/10),context,50,14);
+  t = setTimeout("clock()",100);
 
-  t = setTimeout('clock()',100);
 }
 
 function numbers(num,canvas,x,y){

@@ -6,10 +6,18 @@ routes["#estudio"] = "global/estudio.html";
 routes["#contato"] = "global/contato.html";
 routes["#sobre"] = "global/sobre.html";
 
+routesForknowMore = new Map();
+routesForknowMore["#ESPN"] = true;
+routesForknowMore["#antidoping"] = true;
+routesForknowMore["#dota-2"] = true;
+routesForknowMore["#league-of-legends"] = true;
+routesForknowMore["#counter-strike"] = true;
 $(function(){
   var hash = "#page-home";
   if (location.hash !== ""){
     hash = location.hash;
+    if (routesForknowMore[hash] == true)
+      hash = "#saiba-mais";
     if(routes[hash] == undefined)
       getContent(hash, true,"global/page-error.html");
 
@@ -26,27 +34,29 @@ $(function(){
     getContent(hash, false,routes[hash]);
   }
   activeButton(hash);
-  $('a').click(function(e){
+  $('#box-nav a').click(function(e){
       e.preventDefault();
       var hash = $(this).attr('href');
       getContent(hash, true,routes[hash]);
       activeButton(hash);
-    });
+  });
     window.addEventListener("popstate", function(e) {
       if(routes[location.hash] !== undefined)
         getContent(location.hash, false,routes[location.hash]);
       else
-        getContent(location.hash, false,"global/page-error.html");
+        if(routesForknowMore[location.hash] !== true)
+          getContent(location.hash, false,"global/page-error.html");
       activeButton(location.hash);
     });
 });
 
 function activeButton(hash){
-  if(hash !== "#page-home"){
-    $('a').removeClass('active');
-    $('a[href = '+hash+']').addClass('active');
-  }else {
-    $('a').removeClass('active');
+  if(routesForknowMore[hash]!== true){
+    if(hash !== "#page-home"){
+      $('a').removeClass('active');
+      $('a[href = '+hash+']').addClass('active');
+    }else
+      $('a').removeClass('active');
   }
 }
 
@@ -54,13 +64,11 @@ function getContent(url, addEntry, page) {
   $.ajax({
     url: page,
     dataType: "html",
-    cache: false,
     success: function(result){
       $("#content").empty();
       $("#content").append(result);
-      if(addEntry == true) {
+      if(addEntry == true)
           history.pushState(page, null, url);
-      }
       },
     beforeSend: function(){
       $('#loader').css({display:"block"});
