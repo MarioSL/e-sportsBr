@@ -6,7 +6,7 @@ function clock(){
   context.fillRect(0, 0,canvas.width,canvas.height);
   context.fillStyle = "white";
   d = new Date();
-  
+
   hours = d.getHours();
   minutes = d.getMinutes();
   Seconds = d.getSeconds();
@@ -33,7 +33,7 @@ function numbers(num,canvas,x,y){
       zero(canvas,x,y);
       break;
     case 1:
-      um(canvas,x,y);
+      one(canvas,x,y);
       break;
     case 2:
       dois(canvas,x,y);
