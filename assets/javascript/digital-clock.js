@@ -33,7 +33,7 @@ function numbers(num,canvas,x,y){
       zero(canvas,x,y);
       break;
     case 1:
-      one(canvas,x,y);
+      um(canvas,x,y);
       break;
     case 2:
       dois(canvas,x,y);
