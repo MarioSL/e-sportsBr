@@ -81,8 +81,6 @@ body, html {
   position: absolute;
   top: -50px;
   left: 52%;
-  background: #000 url(../images/logo-e-sports.png) no-repeat center;
-  background-size:cover;
 }
 
 #box-nav {
@@ -380,7 +378,15 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
     top: 0 !important;
 }
 .nav-fixed #logo{
-  top:0 !important;
+  animation-name: logoSmall;
+  animation-duration: 1s;
+  width: 150px;
+  height: 90px;
+  top:0;
+}
+#logo.logo-absolute{
+  animation-name: logoBig;
+  animation-duration: 1s;
 }
 .aside-fixed{
   position: fixed !important;
@@ -421,4 +427,19 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
     font-size: 12pt;
     text-indent: 15mm;
 	  line-height:150%;
+}
+/***
+*
+*Animation --- //-----//--------//-------/
+*
+***/
+@keyframes logoBig{
+  0%   {top:0;width: 150px;height: 90px}
+  100% {top:-50px;width: 200px  ;height: 130px}
+}
+
+
+@keyframes logoSmall{
+  0%   {top:-50px;width: 200px;height: 130px}
+  100% {top:0;width: 150px  ;height: 90px}
 }

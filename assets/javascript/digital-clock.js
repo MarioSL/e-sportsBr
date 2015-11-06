@@ -6,7 +6,7 @@ function clock(){
   context.fillRect(0, 0,canvas.width,canvas.height);
   context.fillStyle = "white";
   d = new Date();
-  
+
   hours = d.getHours();
   minutes = d.getMinutes();
   Seconds = d.getSeconds();
