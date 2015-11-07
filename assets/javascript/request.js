@@ -26,6 +26,9 @@ $(function(){
     history.replaceState(routes[pathName], null,pathName);
     getContent(pathName, false,routes[pathName]);
   }*/
+  if (location.pathname == "/"){
+    history.replaceState("home", null, "/index.html");
+  }
   activeButton(location.pathname);
   $('#box-nav a').click(function(e){
       e.preventDefault();
