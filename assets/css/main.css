@@ -97,7 +97,7 @@ body, html {
 #box-nav nav {
   position: absolute;
   left: 4%;
-  width: 90%;
+  width: 1250px;
   height: 90px;
   margin: 0 auto;
   top: 6px;
@@ -161,6 +161,10 @@ body, html {
   padding: 5% 2%;
   background: rgba(0,0,0,0.85);
 }
+
+#content article{
+  margin: 5% 10%;
+}
 /*------home--------*/
 /*-----------------------*/
 /*-----------------------*/
@@ -188,6 +192,7 @@ body, html {
   width: 20%;
   height: 20%;
   margin-bottom: 3%;
+  margin-right: 5%;
 }
 
 #teams li p{
@@ -264,6 +269,14 @@ body, html {
 /*------Form--------*/
 /*-----------------------*/
 /*-----------------------*/
+#form{
+  padding: 2% 30%;
+}
+#box-form{
+  border: 1px solid white;
+  padding: 15px;
+  background: #000;
+}
 label,input,button{
   display:block;
 }
