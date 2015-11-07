@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="text/javascript" src="assets/javascript/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/jquery.validate.js"></script>
+    <script type="text/javascript" src="assets/javascript/request.js"></script>
+    <script type="text/javascript" src="assets/javascript/nav.js"></script>
+    <script type="text/javascript" src="assets/javascript/digital-numbers.js"></script>
+    <script type="text/javascript" src="assets/javascript/digital-clock.js"></script>
+  </head>
+  <body onload="clock()">
+      <header>
+
+        <div id="banner">
+        	<img src="assets/images/banner.jpg" width="100%" height="500"/>
+        </div>
+        <div id="box-nav">
+          <nav >
+            <ul>
+              <li><a href="/times.html" class="btn btn-blue">Times</a></li>
+              <li><a href="/saiba-mais.html" class="btn btn-blue">Saiba mais</a></li>
+              <li><a href="/estudio.html" class="btn btn-blue">Estúdio</a></li>
+            </ul>
+            <ul class="right">
+              <li><a href="/contato.html" class="btn btn-blue">Contato</a></li>
+              <li><a href="/sobre.html" class="btn btn-blue">Sobre</a></li>
+            </ul>
+            <a href="/index.html"><img id="logo" src="assets/images/logo1.png" alt="" /></a>
+          </nav>
+        </div>
+      </header>
+      <section id="main-content">
+        <section id="content" class="clearfix">
+          <!--before-->
+          <section id="form">
+            <div id="box-form">
+            <h1>Entre em contato</h1>
+
+            <p>
+              De sua opinião sobre o site
+            </p>
+
+              <form id="formContact" method="post" enctype="text/plain">
+                <div id="name">
+                  <label for="name">Nome:</label>
+                  <input type="text" name="formName"/>
+                </div>
+                <div id="email">
+                  <label for="email">Email:</label>
+                  <input type="email" name="formMail"/>
+                </div>
+                <label for="mensage">Menssagem:</label>
+                <textarea name="formMenss" rows="8" cols="40"></textarea>
+
+                <input type="submit" value="Enviar"/>
+              </form>
+            </div>
+          </section>
+          <!--after-->
+        </section>
+        <footer id="main-footer">
+          <canvas id="clock" width="250%" height="70%">Sem suporte</canvas>
+          <img src="assets/images/image_preview.jpeg" alt="Logo UTFPR" class="clearfix" />
+          <p>Copyright © PI1 LV Jefferson Henrique Ramos , Mario Souza Leão 2015.</p>
+        </footer>
+    </section>
+  </body>
+</html>

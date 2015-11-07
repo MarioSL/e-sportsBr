@@ -1,5 +1,4 @@
 function clock(){
-
   canvas = document.getElementById('clock');
   context = canvas.getContext('2d');
   context.fillStyle = "black";
@@ -9,7 +8,8 @@ function clock(){
 
   hours = d.getHours();
   minutes = d.getMinutes();
-  Seconds = d.getSeconds();
+  seconds = d.getSeconds();
+
 
   context.beginPath();
   context.arc(130,45,2,0,Math.PI*2,false);
@@ -23,8 +23,7 @@ function clock(){
   numbers(parseInt(minutes/10),context,180,14);
   numbers(parseInt(hours%10),context,100,14);
   numbers(parseInt(hours/10),context,50,14);
-  t = setTimeout("clock()",100);
-
+  t = setTimeout("clock()",(60000 - seconds*1000));
 }
 
 function numbers(num,canvas,x,y){
@@ -33,30 +32,30 @@ function numbers(num,canvas,x,y){
       zero(canvas,x,y);
       break;
     case 1:
-      um(canvas,x,y);
+      one(canvas,x,y);
       break;
     case 2:
-      dois(canvas,x,y);
+      two(canvas,x,y);
       break;
     case 3:
-      tres(canvas,x,y);
+      three(canvas,x,y);
       break;
     case 4:
-      quatro(canvas,x,y);
+      four(canvas,x,y);
       break;
     case 5:
-      cinco(canvas,x,y);
+      five(canvas,x,y);
       break;
     case 6:
-      seis(canvas,x,y);
+      six(canvas,x,y);
       break;
     case 7:
-      sete(canvas,x,y);
+      seven(canvas,x,y);
       break;
     case 8:
-      oito(canvas,x,y);
+      eight(canvas,x,y);
       break;
     case 9:
-      nove(canvas,x,y);
+      nine(canvas,x,y);
   }
 }

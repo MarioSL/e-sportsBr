@@ -1,82 +1,82 @@
 var zero = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito2(canvas,x,y);
-  palito3(canvas,x,y);
-  palito4(canvas,x,y);
-  palito5(canvas,x,y);
-  palito6(canvas,x,y);
+  risk1(canvas,x,y);
+  risk2(canvas,x,y);
+  risk3(canvas,x,y);
+  risk4(canvas,x,y);
+  risk5(canvas,x,y);
+  risk6(canvas,x,y);
 }
-var um = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito2(canvas,x,y);
+var one = function(canvas,x,y){
+  risk1(canvas,x,y);
+  risk2(canvas,x,y);
 }
-var dois = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito7(canvas,x,y);
-  palito3(canvas,x,y);
-  palito5(canvas,x,y);
-  palito6(canvas,x,y);
-}
-
-var tres = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito7(canvas,x,y);
-  palito3(canvas,x,y);
-  palito2(canvas,x,y);
-  palito6(canvas,x,y);
+var two = function(canvas,x,y){
+  risk1(canvas,x,y);
+  risk7(canvas,x,y);
+  risk3(canvas,x,y);
+  risk5(canvas,x,y);
+  risk6(canvas,x,y);
 }
 
-var quatro = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito7(canvas,x,y);
-  palito2(canvas,x,y);
-  palito4(canvas,x,y);
+var three = function(canvas,x,y){
+  risk1(canvas,x,y);
+  risk7(canvas,x,y);
+  risk3(canvas,x,y);
+  risk2(canvas,x,y);
+  risk6(canvas,x,y);
 }
 
-var cinco = function(canvas,x,y){
-  palito6(canvas,x,y);
-  palito7(canvas,x,y);
-  palito2(canvas,x,y);
-  palito4(canvas,x,y);
-  palito3(canvas,x,y);
+var four = function(canvas,x,y){
+  risk1(canvas,x,y);
+  risk7(canvas,x,y);
+  risk2(canvas,x,y);
+  risk4(canvas,x,y);
 }
 
-var seis = function(canvas,x,y){
-  palito6(canvas,x,y);
-  palito7(canvas,x,y);
-  palito2(canvas,x,y);
-  palito4(canvas,x,y);
-  palito3(canvas,x,y);
-  palito5(canvas,x,y);
+var five = function(canvas,x,y){
+  risk6(canvas,x,y);
+  risk7(canvas,x,y);
+  risk2(canvas,x,y);
+  risk4(canvas,x,y);
+  risk3(canvas,x,y);
 }
 
-var sete = function(canvas,x,y){
-  palito6(canvas,x,y);
-  palito2(canvas,x,y);
-  palito1(canvas,x,y);
-}
-var oito = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito2(canvas,x,y);
-  palito3(canvas,x,y);
-  palito4(canvas,x,y);
-  palito5(canvas,x,y);
-  palito6(canvas,x,y);
-  palito7(canvas,x,y);
-
-}
-var nove = function(canvas,x,y){
-  palito1(canvas,x,y);
-  palito2(canvas,x,y);
-  palito3(canvas,x,y);
-  palito4(canvas,x,y);
-
-  palito6(canvas,x,y);
-  palito7(canvas,x,y);
-
+var six = function(canvas,x,y){
+  risk6(canvas,x,y);
+  risk7(canvas,x,y);
+  risk2(canvas,x,y);
+  risk4(canvas,x,y);
+  risk3(canvas,x,y);
+  risk5(canvas,x,y);
 }
 
-function palito1(canvas,x,y){
+var seven = function(canvas,x,y){
+  risk6(canvas,x,y);
+  risk2(canvas,x,y);
+  risk1(canvas,x,y);
+}
+var eight = function(canvas,x,y){
+  risk1(canvas,x,y);
+  risk2(canvas,x,y);
+  risk3(canvas,x,y);
+  risk4(canvas,x,y);
+  risk5(canvas,x,y);
+  risk6(canvas,x,y);
+  risk7(canvas,x,y);
+
+}
+var nine = function(canvas,x,y){
+  risk1(canvas,x,y);
+  risk2(canvas,x,y);
+  risk3(canvas,x,y);
+  risk4(canvas,x,y);
+
+  risk6(canvas,x,y);
+  risk7(canvas,x,y);
+
+}
+
+function risk1(canvas,x,y){
   canvas.fillRect(x,y,6,15);
 
   canvas.beginPath();
@@ -92,7 +92,7 @@ function palito1(canvas,x,y){
   canvas.fill();
 }
 //------------------------------------
-function palito2(canvas,x,y){
+function risk2(canvas,x,y){
   canvas.fillRect(x,y+31,6,15);
 
   canvas.moveTo(x+6,y+24);
@@ -106,7 +106,7 @@ function palito2(canvas,x,y){
   canvas.fill();
 }
 //------------------------------------
-function palito3(canvas,x,y){
+function risk3(canvas,x,y){
   canvas.fillRect(x-25,y+48,20,6);
 
   canvas.beginPath();
@@ -122,7 +122,7 @@ function palito3(canvas,x,y){
   canvas.fill();
 }
 //------------------------------------
-function palito4(canvas,x,y){
+function risk4(canvas,x,y){
   canvas.fillRect(x-35,y,6,15);
 
   canvas.beginPath();
@@ -138,7 +138,7 @@ function palito4(canvas,x,y){
   canvas.fill();
 }
   //------------------------------------
-function palito5(canvas,x,y){
+function risk5(canvas,x,y){
 
   canvas.fillRect(x-35,y+31,6,15);
 
@@ -155,7 +155,7 @@ function palito5(canvas,x,y){
   canvas.fill();
 }
   //------------------------------------
-function palito6(canvas,x,y){
+function risk6(canvas,x,y){
 
   canvas.fillRect(x-25,y-8,20,6);
 
@@ -172,7 +172,7 @@ function palito6(canvas,x,y){
   canvas.fill();
 }
   //------------------------------------
-function palito7(canvas,x,y){
+function risk7(canvas,x,y){
 
   canvas.fillRect(x-25,y+20,20,6);
 

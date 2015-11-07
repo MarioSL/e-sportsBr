@@ -1,74 +1,64 @@
 routes = new Map();
-routes["#page-home"] = "global/page-home.html";
-routes["#times"] = "global/times.html";
-routes["#saiba-mais"] = "global/saiba-mais.html";
-routes["#estudio"] = "global/estudio.html";
-routes["#contato"] = "global/contato.html";
-routes["#sobre"] = "global/sobre.html";
-
-routesForknowMore = new Map();
-routesForknowMore["#ESPN"] = true;
-routesForknowMore["#antidoping"] = true;
-routesForknowMore["#dota-2"] = true;
-routesForknowMore["#league-of-legends"] = true;
-routesForknowMore["#counter-strike"] = true;
+routes["/index.html"] = "home";
+routes["/times.html"] = "times";
+routes["/saiba-mais.html"] = "saiba-mais";
+routes["/estudio.html"] = "estudio";
+routes["/contato.html"] = "contato";
+routes["/sobre.html"] = "sobre";
 $(function(){
-  var hash = "#page-home";
-  if (location.hash !== ""){
-    hash = location.hash;
-    if (routesForknowMore[hash] == true)
-      hash = "#saiba-mais";
-    if(routes[hash] == undefined)
-      getContent(hash, true,"global/page-error.html");
+  /*var pathName = "index.html";
+  if (location.pathname !== "/"){
+    pathName = location.pathname;
+    /*if (routesForknowMore[pathName] == true)
+      pathName = "#saiba-mais";
+    if(routes[pathName] == undefined)
+      getContent(pathName, true,"page-error.html");
 
     else{
-      if(routes[hash] !== history.state)
-        getContent(hash, true,routes[hash]);
+      if(routes[pathName] !== history.state)
+        getContent(pathName, true,routes[pathName]);
 
       else
-        getContent(hash, false,routes[hash]);
+        getContent(pathName, false,routes[pathName]);
 
     }
   }else{
-    history.replaceState(routes[hash], null,hash);
-    getContent(hash, false,routes[hash]);
-  }
-  activeButton(hash);
+    history.replaceState(routes[pathName], null,pathName);
+    getContent(pathName, false,routes[pathName]);
+  }*/
+  activeButton(location.pathname);
   $('#box-nav a').click(function(e){
       e.preventDefault();
-      var hash = $(this).attr('href');
-      getContent(hash, true,routes[hash]);
-      activeButton(hash);
+      var pathName = $(this).attr('href');
+      getContent(pathName, true,routes[pathName]);
+      activeButton(pathName);
+      return false;
   });
     window.addEventListener("popstate", function(e) {
-      if(routes[location.hash] !== undefined)
-        getContent(location.hash, false,routes[location.hash]);
-      else
-        if(routesForknowMore[location.hash] !== true)
-          getContent(location.hash, false,"global/page-error.html");
-      activeButton(location.hash);
+      if(routes[location.pathname] !== undefined)
+        getContent(location.pathname, false,routes[location.pathname]);
+      activeButton(location.pathname);
     });
 });
 
-function activeButton(hash){
-  if(routesForknowMore[hash]!== true){
-    if(hash !== "#page-home"){
-      $('a').removeClass('active');
-      $('a[href = '+hash+']').addClass('active');
-    }else
-      $('a').removeClass('active');
-  }
+function activeButton(pathName){
+  if(pathName !== "/index.html"){
+    $('a').removeClass('active');
+    $('[href = "'+pathName+'"]').addClass('active');
+  }else
+    $('a').removeClass('active');
 }
 
-function getContent(url, addEntry, page) {
+function getContent(link, addEntry, page) {
   $.ajax({
-    url: page,
+    url: link,
     dataType: "html",
     success: function(result){
+      //alert(result.slice(result.search("<!--before-->"),result.search("<!--after-->")));
       $("#content").empty();
-      $("#content").append(result);
+      $("#content").append(result.slice(result.search("<!--before-->"),result.search("<!--after-->")));
       if(addEntry == true)
-          history.pushState(page, null, url);
+          history.pushState(page, null, link);
       },
     beforeSend: function(){
       $('#loader').css({display:"block"});
