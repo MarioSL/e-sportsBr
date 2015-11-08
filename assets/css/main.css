@@ -324,10 +324,6 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
 #main-footer p{
   margin: 35px 0 0 30%;
 }
-#clock{
-  width:16%;
-  height:60px;
-}
 
 /*------footer-home--------*/
 /*-----------------------*/
@@ -347,6 +343,8 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
   background-color: white;
   float: right;
   margin: 1% 3%;
+  width:16%;
+  height:60px;
 }
 /**
 *
