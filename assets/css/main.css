@@ -135,13 +135,15 @@ body, html {
   text-align: center;
   margin-left:10%;
   height: 30px;
-  width: 90px;
+  width:90px;
   padding-top: 5px;
   float: left;
   text-decoration: none;
   color: white;
   font-size: 16px;
   font-family:sans-serif;
+  border-radius:8px;
+  border:1px solid white;
 
 }
 
@@ -276,12 +278,16 @@ body, html {
   border: 1px solid white;
   padding: 15px;
   background: #000;
+   
 }
 label,input,button{
   display:block;
+  border-radius:8px;
+  
 }
 label[for=name],label[for=email],input[for=name],input[for=email]{
   display: inline-block;
+
 }
 #name,#email{
   margin-bottom: 20px;
@@ -367,6 +373,7 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
   background:#363636;
   color:#fff;
   box-shadow:0 5px 0 #1C1C1C;
+  border-radius:12px;  
 }
 
 .btn-blue:hover{
@@ -375,9 +382,9 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
 }
 
 .btn-blue:active{
-  position:relative;
-  top:5px;
-  box-shadow:none;
+	position: relative;
+	top: 5px;
+	box-shadow: none;
 }
 .btn-blue.active{
   background:#696969;
@@ -439,7 +446,7 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
     text-align: justify;
     font-size: 12pt;
     text-indent: 15mm;
-	  line-height:150%;
+	line-height:150%;
 }
 /***
 *
