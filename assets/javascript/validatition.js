@@ -3,7 +3,7 @@ $(document).ready(function(){
             rules: {
                 formName: {
                     required: true,
-                    minlength: 5
+                    minlength: 3
                 },
                 formMail: {
                     required: true,
