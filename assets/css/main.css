@@ -147,6 +147,8 @@ body, html {
   color: white;
   font-size: 16px;
   font-family:sans-serif;
+  border-radius:8px;
+  border:1px solid white;
 
 }
 
@@ -265,6 +267,7 @@ body, html {
   text-decoration: none;
   font-size: 18px;
   color: #CECECE;
+  border: 1px solid white;
 }
 /*------home-------*/
 /*-----------------------*/
@@ -297,6 +300,8 @@ body, html {
 }
 label,input,button{
   display:block;
+  border-radius:8px;
+  padding:4px;
 }
 label[for=name],label[for=email],input[for=name],input[for=email]{
   display: inline-block;
@@ -375,7 +380,7 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
 /*-----------------------*/
 /*-----------------------*/
 .btn{
-  font-family: arial;
+  font-family: "Times New Roman";
   text-transform: uppercase;
   font-weight:700;
   padding:  10px;
@@ -384,8 +389,9 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
 
 .btn-blue{
   background:#363636;
-  color:#fff;
-  box-shadow:0 5px 0 #1C1C1C;
+  color: #FFF;
+  box-shadow:0 5px 0 #FFF; /*----verificar aqui a melhor opção de cor para os botões----*/
+  border-radius:12px;
 }
 
 .btn-blue:hover{
@@ -458,7 +464,7 @@ label[for=name],label[for=email],input[for=name],input[for=email]{
     text-align: justify;
     font-size: 12pt;
     text-indent: 15mm;
-	  line-height:150%;
+	line-height:150%;
 }
 /***
 *
