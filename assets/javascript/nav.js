@@ -7,8 +7,9 @@ for(var i = 0;i < 5;i++){
 var isTrue = true;
 var i = 0;
 $(function(){
+  var bannerHeight = $('#banner').height();
   animateFront = function(){
-    if($(window).scrollTop() < 500)animateBack();
+    if($(window).scrollTop() < bannerHeight)animateBack();
     i++;
     if(i < 5){
       logo.attr("src",imagesArray[i]);
@@ -16,7 +17,7 @@ $(function(){
     }
   }
   animateBack = function(){
-    if($(window).scrollTop() > 500)animateFront();
+    if($(window).scrollTop() > bannerHeight)animateFront();
     i--;
     if(i >= 0){
       logo.attr("src",imagesArray[i]);
@@ -27,18 +28,18 @@ $(function(){
 	var aside = $('#games-aside');
   var logo = $("#logo");
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 500 && isTrue){
+		if ($(this).scrollTop() > bannerHeight && isTrue){
       isTrue = false;
 			nav.addClass("nav-fixed");
       logo.removeClass("logo-absolute");
       animateFront();
-		}else if($(this).scrollTop() < 500 && !isTrue){
+		}else if($(this).scrollTop() < bannerHeight && !isTrue){
       isTrue = true
       logo.addClass("logo-absolute");
 			nav.removeClass("nav-fixed");
       animateBack();
 		}
-    if ($(this).scrollTop() > 500){
+    if ($(this).scrollTop() > bannerHeight){
       aside.addClass("aside-fixed");
       $('#games-aside a').removeClass('active');
       $('#games-aside a[href = #ESPN]').addClass('active')
