@@ -34,9 +34,9 @@ $(function(){
   $('#box-nav a').click(function(e){
       e.preventDefault();
       var pathName = $(this).attr('href');
+      document.title = routes[pathName];
       getContent(pathName, true,routes[pathName]);
       activeButton(pathName);
-      document.title = routes[location.pathname];
       return false;
   });
     window.addEventListener("popstate", function(e) {
