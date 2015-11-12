@@ -391,9 +391,9 @@ textarea{
 /*------nav-fixes--------*/
 /*-----------------------*/
 /*-----------------------*/
-.nav-fixed {
-    position:fixed !important;
-    top: 0 !important;
+#box-nav.nav-fixed{
+    position:fixed;
+    top: 0;
 }
 .nav-fixed #logo{
   animation-name: logoSmall;
