@@ -1,10 +1,10 @@
 routes = new Map();
-routes["/index.html"] = "home";
-routes["/times.html"] = "times";
-routes["/saiba-mais.html"] = "saiba-mais";
-routes["/estudio.html"] = "estudio";
-routes["/contato.html"] = "contato";
-routes["/sobre.html"] = "sobre";
+routes["/index.html"] = "E-sports";
+routes["/times.html"] = "Times";
+routes["/saiba-mais.html"] = "Saiba mais";
+routes["/estudio.html"] = "Estudio";
+routes["/contato.html"] = "Contato";
+routes["/sobre.html"] = "Sobre";
 $(function(){
   /*var pathName = "index.html";
   if (location.pathname !== "/"){
@@ -29,10 +29,12 @@ $(function(){
   if (location.pathname == "/"){
     history.replaceState("home", null, "/index.html");
   }
+  document.title = routes[location.pathname];
   activeButton(location.pathname);
   $('#box-nav a').click(function(e){
       e.preventDefault();
       var pathName = $(this).attr('href');
+      document.title = routes[pathName];
       getContent(pathName, true,routes[pathName]);
       activeButton(pathName);
       return false;
@@ -41,6 +43,7 @@ $(function(){
       if(routes[location.pathname] !== undefined)
         getContent(location.pathname, false,routes[location.pathname]);
       activeButton(location.pathname);
+      document.title = routes[location.pathname];
     });
 });
 

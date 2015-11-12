@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>E-sports</title>
+    <title>Contato</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script type="text/javascript" src="assets/javascript/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/jquery.validate.js"></script>
     <script type="text/javascript" src="assets/javascript/request.js"></script>
     <script type="text/javascript" src="assets/javascript/nav.js"></script>
     <script type="text/javascript" src="assets/javascript/digital-numbers.js"></script>
     <script type="text/javascript" src="assets/javascript/digital-clock.js"></script>
+    <script type="text/javascript" src="assets/javascript/validate.js"></script>
   </head>
   <body onload="clock()">
       <header>
@@ -22,20 +23,16 @@
 
         <div id="box-nav">
           <nav >
-            <ul>
 
+            <ul>
               <li><a href="/times.html" class="btn btn-blue">Times</a></li>
               <li><a href="/saiba-mais.html" class="btn btn-blue">Saiba mais</a></li>
               <li><a href="/estudio.html" class="btn btn-blue">Estúdio</a></li>
-
-            </ul>
-
-            <ul class="right">
+              <li><a href="/index.html"><img id="logo" src="assets/images/logo1.png" alt="logo" /></a></li>
               <li><a href="/contato.html" class="btn btn-blue">Contato</a></li>
               <li><a href="/sobre.html" class="btn btn-blue">Sobre</a></li>
             </ul>
 
-            <a href="/index.html"><img id="logo" src="assets/images/logo1.png" alt="" /></a>
           </nav>
         </div><!--div#box-nav-->
 
@@ -53,7 +50,7 @@
               De sua opinião sobre o site
             </p>
 
-              <form id="formContact" method="post" enctype="text/plain">
+              <form name="formContact" method="post" enctype="text/plain" onSubmit="submitDate()">
                 <div id="name">
                   <label>Nome:</label>
                   <input type="text" name="formName"/>
@@ -68,7 +65,7 @@
                 <input type="submit" value="Enviar" class="btn btn-blue"/>
 
               </form>
-              
+
             </div><!--div#box-form-->
 
           </section><!--section#form-->

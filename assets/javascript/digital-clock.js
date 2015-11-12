@@ -12,17 +12,17 @@ function clock(){
 
 
   context.beginPath();
-  context.arc(130,85,2,0,Math.PI*2,false);
+  context.arc(150,85,2,0,Math.PI*2,false);
   context.fill();
 
   context.beginPath();
-  context.arc(130,65,2,0,Math.PI*2,false);
+  context.arc(150,65,2,0,Math.PI*2,false);
   context.fill();
 
-  numbers(parseInt(minutes%10),context,230,54);
-  numbers(parseInt(minutes/10),context,180,54);
-  numbers(parseInt(hours%10),context,100,54);
-  numbers(parseInt(hours/10),context,50,54);
+  numbers(parseInt(minutes%10),context,250,54);
+  numbers(parseInt(minutes/10),context,200,54);
+  numbers(parseInt(hours%10),context,120,54);
+  numbers(parseInt(hours/10),context,70,54);
   t = setTimeout("clock()",(60000 - seconds*1000));
 }
 
