@@ -136,8 +136,7 @@ body, html {
   width: 85%;
   height: 100%;
   position: relative;
-  bottom: 100px;
-  margin: 15% 5% 0 5%;
+  margin: 10% 5% 0 5%;
   padding: 5% 2%;
   background: rgba(0,0,0,0.85);
 }
@@ -200,10 +199,20 @@ body, html {
 /*-----------------------*/
 /*-----------------------*/
 #article-about img{
-  width: 450px;
-  height: 300px;
+  width: 50%;
+  height: 20vw;
   margin: 0 25%;
   margin-bottom: 20px;
+}
+
+#article-about p{
+  font-size: 1.3vw;
+}
+#article-about h1{
+  font-size: 1.8vw;
+}
+#article-about h2{
+  font-size: 1.5vw;
 }
 /**
 *
