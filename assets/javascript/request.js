@@ -36,12 +36,14 @@ $(function(){
       var pathName = $(this).attr('href');
       getContent(pathName, true,routes[pathName]);
       activeButton(pathName);
+      document.title = routes[location.pathname];
       return false;
   });
     window.addEventListener("popstate", function(e) {
       if(routes[location.pathname] !== undefined)
         getContent(location.pathname, false,routes[location.pathname]);
       activeButton(location.pathname);
+      document.title = routes[location.pathname];
     });
 });
 
