@@ -10,7 +10,6 @@
     <script type="text/javascript" src="assets/javascript/nav.js"></script>
     <script type="text/javascript" src="assets/javascript/digital-numbers.js"></script>
     <script type="text/javascript" src="assets/javascript/digital-clock.js"></script>
-    <script type="text/javascript" src="assets/javascript/validate.js"></script>
   </head>
   <body onload="clock()">
       <header>
@@ -38,9 +37,10 @@
 
       </header>
 
-      <section id="main-content">
+      <div id="main-content">
 
-        <section id="content" class="clearfix">
+        <div id="content" class="clearfix">
+          <script type="text/javascript" src="assets/javascript/validate.js"></script>
           <!--before-->
           <section id="form">
             <div id="box-form">
@@ -70,7 +70,7 @@
 
           </section><!--section#form-->
           <!--after-->
-        </section><!--section#content-->
+        </div><!--div#content-->
 
         <footer id="main-footer">
 
@@ -82,6 +82,6 @@
 
         </footer>
 
-    </section><!--section#main-content-->
+    </div><!--div#main-content-->
   </body>
 </html>

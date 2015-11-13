@@ -1,3 +1,15 @@
+@media screen and (max-device-width: 550px) {
+  #article-about p{
+    font-size: 8px;
+  }
+  #article-about h1{
+    font-size: 12px;
+  }
+  #article-about h2{
+    font-size: 9px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   #article-about p{
     font-size: 8px;
