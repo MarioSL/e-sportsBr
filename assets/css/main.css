@@ -52,7 +52,7 @@ body, html {
 *Header --- //-----//--------//-------/
 *
 ***/
-/*-----Baner-------*/
+/*-----Banner-------*/
 #banner{
   width: 100%;
   min-width: 300px;
@@ -178,6 +178,7 @@ body, html {
   font-style: oblique;
   text-decoration:underline;
 }
+
 #teams li img{
   float: left;
   width: 20%;
@@ -189,14 +190,57 @@ body, html {
 #teams li p{
   margin-top: 5%;
 }
+/*------Games--------*/
+/*-----------------------*/
+/*-----------------------*/
 
 #article-games{
 	padding-left:270px;
 }
 
-#article-games h1{
+#article-games article{
 	padding-top: 160px;
 }
+
+#article-games h1{
+  border: 0;
+  font-size: 30px;
+  font-style: oblique;
+  text-decoration:underline;
+}
+
+#article-games h2{
+  border-bottom: 1px solid #FFF;
+}
+
+
+/*------Games-Gallery-------*/
+/*-----------------------*/
+/*-----------------------*/
+#CBLOL #img-featured{
+  width: 500px;
+  height: 350px;
+  margin: 0 0 0 100px;
+  border: 1px solid #FFF;
+}
+
+#gallery{
+  border-top:1px solid #FFF;
+}
+#gallery img{
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+#gallery img:hover{
+  width: 150px;
+  height: 150px;
+  margin: 10px 0 0 0;
+}
+
+
 /*------about--------*/
 /*-----------------------*/
 /*-----------------------*/
@@ -228,11 +272,6 @@ body, html {
   padding: 0 30px;
   border-left: 1px solid white;
 }
-/**
-*
-*aside --- //-----//--------//-------/
-*
-***/
 
 /*------games--------*/
 /*-----------------------*/
@@ -245,6 +284,9 @@ body, html {
   margin: 0 2%;
   border-right: 1px solid white;
 }
+/*------nav-games--------*/
+/*-----------------------*/
+/*-----------------------*/
 #nav-aside ul{
   list-style: none;
   padding: 10px;
@@ -304,6 +346,9 @@ textarea{
   width: 90%;
   margin-bottom: 3%;
 }
+textarea,input{
+  color: #000;
+}
 
 /**
 *
@@ -351,21 +396,21 @@ textarea{
 *Classes --- //-----//--------//-------/
 *
 ***/
-/*------nav-active--------*/
+/*------nav-butoons--------*/
 /*-----------------------*/
 /*-----------------------*/
 .btn{
   font-family: "Times New Roman";
   text-transform: uppercase;
   font-weight:700;
-  padding:  1%;
+  padding:1% 1.5% 1% 0.6%;
   cursor: pointer;
 }
 
 .btn-blue{
   background:#363636;
   color: #FFF;
-  box-shadow:0 0.5vw 0 #4F4F4F; /*----verificar aqui a melhor opção de cor para os botões----*/
+  box-shadow:0 0.5vw 0 #4F4F4F;
   border-radius:16%;
   border:1px solid white;
 }
@@ -395,20 +440,23 @@ textarea{
     position:fixed;
     top: 0;
 }
+
 .nav-fixed #logo{
   animation-name: logoSmall;
   animation-duration: 1s;
   height: 7vw;
   top:0;
 }
+
 #logo.logo-absolute{
   animation-name: logoBig;
   animation-duration: 1s;
 }
+
 .aside-fixed{
   position: fixed !important;
   left: 6.70% !important;
-  bottom: 16% !important;
+  bottom: 7% !important;
 }
 /*------clearfix---------*/
 /*-----------------------*/
@@ -433,12 +481,12 @@ textarea{
 /*-----------------------*/
 /*-----------------------*/
 
-.text-center{
+.text-center{   /*------text in center----------*/
   text-align: center;
 }
 
 
-.indentation{
+.indentation{   /*------ident the text----------*/
     font-family: "Times New Roman";
     text-align: justify;
     font-size: 12pt;
@@ -446,12 +494,12 @@ textarea{
 	  line-height:150%;
 }
 
-.strong{
+.strong{  /*------text strong----------*/
   font-size: 13pt;
   font-weight: bolder;
 }
 
-.link-White{
+.link-White{  /*------link color white----------*/
   color: white;
 }
 /***
