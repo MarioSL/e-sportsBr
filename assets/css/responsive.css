@@ -12,12 +12,12 @@
 
 @media screen and (max-device-width: 500px) {
   #article-about p{
-    font-size: 16px;
+    font-size: 18px;
   }
   #article-about h1{
-    font-size: 20px;
+    font-size: 23px;
   }
   #article-about h2{
-    font-size: 18px;
+    font-size: 20px;
   }
 }

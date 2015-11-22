@@ -68,11 +68,11 @@ function getContent(link, addEntry, page) { // renderiza o link
       if(addEntry == true)
           history.pushState(page, null, link);
       },
-    beforeSend: function(){
+  /*  beforeSend: function(){
       $('#loader').css({display:"block"});
     },
     complete: function(){
       $('#loader').css({display:"none"});
-    }
+    }*/
   });
 }
